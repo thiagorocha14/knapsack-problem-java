@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    image: knapsack-problem-java
+    ports:
+      - "6000:8080"
+    volumes:
+      - ./:/app
+    environment:
+      SERVER_PORT: "8080"
