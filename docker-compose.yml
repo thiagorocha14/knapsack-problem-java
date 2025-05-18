@@ -1,5 +1,5 @@
 services:
-  app:
+  knapsack-api-java:
     build: .
     image: knapsack-problem-java
     ports:

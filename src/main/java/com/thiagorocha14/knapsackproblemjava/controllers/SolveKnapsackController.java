@@ -5,10 +5,7 @@ import com.thiagorocha14.knapsackproblemjava.dtos.ProductDTO;
 import com.thiagorocha14.knapsackproblemjava.requests.SolveKnapsackRequest;
 import com.thiagorocha14.knapsackproblemjava.responses.SolvedKnapsackResponse;
 import com.thiagorocha14.knapsackproblemjava.services.KnapsackService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +19,7 @@ public class SolveKnapsackController {
         this.knapsackService = knapsackService;
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping
     public SolvedKnapsackResponse solveKnapsack(@RequestBody SolveKnapsackRequest request) {
         long startTime = System.currentTimeMillis();
